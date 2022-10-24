@@ -45,8 +45,12 @@ app.get("/api/count", async (req, res) => {
 // 小程序调用，获取微信 Open ID
 app.get("/api/wx_openid", async (req,res)=>{
   if (req.headers["x-wx-source"]){
-    res.send(req.headers["x-wx-openid"]).data;
+    res.send(req.headers["x-wx-openid"]);
   }
+});
+// 测试内容1
+app.get("/api/ceshi", async (req,res)=>{
+  res.send("测试内容001");
 });
 
 const port = process.env.PORT || 80;
